@@ -14,6 +14,7 @@ use App\Http\Controllers\Controller;
 
 use View;
 use Excel;
+use Exception;
 
 class BookController extends Controller
 {
@@ -69,13 +70,22 @@ class BookController extends Controller
 
     public function importBooks()
     {
-      $file = Input::file('csvfile');
+      $rules = array(
+          'csvfile'    => 'required|mimes:csv,txt',
+      );
+
       try{
+        $file = Input::file('csvfile');
+        if(is_null($file))
+        {
+          throw new Exception("File upload required");
+        }
         Excel::load($file, function($reader) {
             $results = $reader->all();
             foreach($results as $row) {
               $book = new Book;
 
+              # First row should be like "Title, Author"
               $data = array(
                   'title'  => $row->title,
                   'author'  => $row->author
