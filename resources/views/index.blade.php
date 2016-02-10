@@ -5,13 +5,13 @@
     </head>
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="public/css/bootstrap.min.css" >
-    <link rel="stylesheet" href="public/css/dataTables.bootstrap.css" >
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/dataTables.bootstrap.css" >
 
-    <script src="public/jquery-1.12.0.min.js"></script>
-    <script src="public/js/bootstrap.min.js"></script>
-    <script src="public/js/jquery.dataTables.js"></script>
-    <script src="public/js/dataTables.bootstrap.js"></script>
+    <script src="jquery-1.12.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.dataTables.js"></script>
+    <script src="js/dataTables.bootstrap.js"></script>
 
 
     <body>
